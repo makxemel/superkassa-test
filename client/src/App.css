@@ -1,0 +1,22 @@
+.App {
+  text-align: center;
+}
+
+button {
+  border-radius: 50px;
+  height: 150px;
+  width: 150px;
+}
+
+.wrapper {
+  text-align: center;
+}
+
+.button {
+  position: absolute;
+  top: 50%;
+  margin-left: 50%;
+  border-radius: 50px;
+  height: 150px;
+  width: 150px;
+}
