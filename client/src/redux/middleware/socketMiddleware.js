@@ -1,4 +1,4 @@
-import socket from '../socket';
+import socket from './socket';
 import { SWITCH_BUTTON_STATUS } from '../types/types';
 import { getButtonStatus } from '../actions/getButtonStatus';
 
