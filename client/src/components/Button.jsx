@@ -1,11 +1,14 @@
 import React from 'react';
-import { connect } from 'react-redux';
+import { useDispatch, useSelector } from 'react-redux';
 import { switchButtonStatus } from '../redux/actions/switchButtonStatus';
 
-const Button = ({ buttonStatus, switchButtonStatus }) => {
+const Button = () => {
+  const dispatch = useDispatch();
+  const buttonStatus = useSelector((state) => state.buttonStatus);
+
   const onClickhandler = (e) => {
     e.preventDefault();
-    switchButtonStatus();
+    dispatch(switchButtonStatus());
   };
 
   return (
@@ -15,10 +18,4 @@ const Button = ({ buttonStatus, switchButtonStatus }) => {
   );
 };
 
-const mapStateToProps = (state) => {
-  return {
-    buttonStatus: state.buttonStatus,
-  };
-};
-
-export default connect(mapStateToProps, { switchButtonStatus })(Button);
+export default Button;
